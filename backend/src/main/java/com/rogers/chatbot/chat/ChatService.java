@@ -67,6 +67,8 @@ public class ChatService {
           .setQueryInput(input)
           .build());
 
+      logResult(round, response);
+
       ToolCall toolCall = null;
       for (ResponseMessage message : response.getQueryResult().getResponseMessagesList()) {
         if (message.hasText()) messages.addAll(message.getText().getTextList());
@@ -95,6 +97,18 @@ public class ChatService {
   }
 
   private record ToolOutcome(Struct output, RecommendResponse recommendation) {}
+
+  /** Prints what Dialogflow returned, to see where the agent's reply ends up. */
+  private void logResult(int round, DetectIntentResponse response) {
+    if (!log.isDebugEnabled()) return;
+    try {
+      String json = JsonFormat.printer().print(response.getQueryResult());
+      log.debug("Dialogflow round {} queryResult:\n{}", round,
+          json.length() > 6000 ? json.substring(0, 6000) + "\n...(truncated)" : json);
+    } catch (Exception e) {
+      log.debug("Could not print queryResult: {}", e.getMessage());
+    }
+  }
 
   /** Runs the recommendation tool with the parameters the agent collected. */
   private ToolOutcome runTool(ToolCall call) {

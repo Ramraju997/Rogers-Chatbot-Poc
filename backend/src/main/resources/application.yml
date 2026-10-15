@@ -1,3 +1,11 @@
+logging:
+  # Also written to backend/logs/backend.log (git-ignored).
+  file:
+    name: logs/backend.log
+  level:
+    # DEBUG prints every Dialogflow response; set to INFO once things work.
+    com.rogers.chatbot.chat: DEBUG
+
 server:
   # Same port the Angular dev proxy (proxy.conf.json) forwards /api to.
   port: 3000
