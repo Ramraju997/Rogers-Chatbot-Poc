@@ -6,8 +6,8 @@
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
-    "server": "npm --prefix server start",
-    "server:install": "npm --prefix server install"
+    "server": "cd server && npm start",
+    "server:install": "cd server && npm install"
   },
   "dependencies": {
     "@angular/common": "^20.3.0",
