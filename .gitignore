@@ -4,7 +4,7 @@ out-tsc/
 .angular/
 .env
 *.key.json
-service-account*.json
+# service-account.json is committed on purpose (private repo)
 npm-debug.log*
 .DS_Store
 Thumbs.db
@@ -13,6 +13,4 @@ Thumbs.db
 
 # Spring Boot backend
 backend/target/
-backend/data/
-backend/service-account.json
 backend/logs/

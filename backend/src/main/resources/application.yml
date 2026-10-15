@@ -3,8 +3,8 @@ logging:
   file:
     name: logs/backend.log
   level:
-    # DEBUG prints every Dialogflow response; set to INFO once things work.
-    com.rogers.chatbot.chat: DEBUG
+    # Set to DEBUG to print every Dialogflow response.
+    com.rogers.chatbot.chat: INFO
 
 server:
   # Same port the Angular dev proxy (proxy.conf.json) forwards /api to.

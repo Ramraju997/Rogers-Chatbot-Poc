@@ -54,4 +54,10 @@ In the left menu, open **Tools** and click **+ Create**:
 | Output schema | contents of `tool-output-schema.json` |
 
 Save, then open the playbook and add `recommend_device_plan` under **Available tools**.
+
+Dialogflow tool schemas need a `properties` list on every object and don't accept `integer` (use `number`); the schema files here already follow both rules.
+
+## Model
+
+Use a **non-lite** model (playbook **Settings** tab, or agent settings → Generative AI). With `gemini-3.1-flash-lite` the agent calls the tool and then ends the session without replying.
 Function tools are run by our Spring Boot backend, not by Google, so nothing needs to be publicly reachable.

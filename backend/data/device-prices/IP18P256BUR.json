@@ -1,0 +1,1223 @@
+[
+    {
+        "skuId": "sku_device_IP18P256BUR_prodIP18P",
+        "productName": "iPhone 18 Pro",
+        "slug": "apple-iphone-18-pro",
+        "externalId": "IP18P256BUR",
+        "variantDisplayName": "iPhone 18 Pro 256GB Burgundy",
+        "hideVoluntaryDpIndicator": true,
+        "prices": [
+            {
+                "id": "sku_devicePrice_noterm_NOTERM_p786345886_IP18P256BUR_NAC_NOTERM",
+                "name": "NOTERM.NOTERM.NOTERM.MSRP",
+                "priceType": "oneTimeCharge",
+                "priceTier": "NOTERM",
+                "tierCode": "NOTERM",
+                "hupTier": "MSRP",
+                "programCode": "NOTERM",
+                "financing": false,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 0,
+                "recurringCreditDuration": 0,
+                "programIndicator": "NoTerm",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 0.0,
+                "financingAmount": 0.0,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 0.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 0.0,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "promotion": {
+                    "promoCopy": "",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": true,
+                "compatibleWithCurrentPlan": true,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": false
+            },
+            {
+                "id": "sku_devicePrice_upfrontedge_RFIN3HIGH_p408992661_IP18P256BUR_NAC_RF3HGH_NAC",
+                "name": "RFIN3HIGH.RF3HGH_NAC.UPFRONTEDGE.RF3HGH_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "UPFRONTEDGE",
+                "tierCode": "RFIN3HIGH",
+                "hupTier": "RF3HGH_NAC",
+                "programCode": "RF3HGH_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 809.28,
+                "financingAmount": 809.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 990.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 33.72,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": true,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": true,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        },
+                        {
+                            "content": "Includes a one-time $990 Save & Return credit towards the total device cost (phone must be returned within 2 years)"
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": false
+            },
+            {
+                "id": "sku_devicePrice_upfrontedge_RFIN3_ULTI_p305073681_IP18P256BUR_NAC_RF_ULT_NAC",
+                "name": "RFIN3_ULTI.RF_ULT_NAC.UPFRONTEDGE.ULTI_C_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "UPFRONTEDGE",
+                "tierCode": "RFIN3_ULTI",
+                "hupTier": "ULTI_C_NAC",
+                "programCode": "RF_ULT_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 809.28,
+                "financingAmount": 809.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 990.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 33.72,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": true,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        },
+                        {
+                            "content": "Includes a one-time $990 Save & Return credit towards the total device cost (phone must be returned within 2 years)"
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": true
+            },
+            {
+                "id": "sku_devicePrice_upfrontedge_RFIN3LOW_p957008852_IP18P256BUR_NAC_RF3LOW_NAC",
+                "name": "RFIN3LOW.RF3LOW_NAC.UPFRONTEDGE.RF3LOW_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "UPFRONTEDGE",
+                "tierCode": "RFIN3LOW",
+                "hupTier": "RF3LOW_NAC",
+                "programCode": "RF3LOW_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 1049.28,
+                "financingAmount": 1049.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 750.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 43.72,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": true,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        },
+                        {
+                            "content": "Includes a one-time $750 Save & Return credit towards the total device cost (phone must be returned within 2 years)"
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": false
+            },
+            {
+                "id": "sku_devicePrice_upfrontedge_EDGEFIN2TAB_p478121827_IP18P256BUR_NAC_EDGEF2_NAC",
+                "name": "EDGEFIN2TAB.EDGEF2_NAC.UPFRONTEDGE.EDGEF2_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "UPFRONTEDGE",
+                "tierCode": "EDGEFIN2TAB",
+                "hupTier": "EDGEF2_NAC",
+                "programCode": "EDGEF2_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 1049.28,
+                "financingAmount": 1049.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 750.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 43.72,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": true,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        },
+                        {
+                            "content": "Includes a one-time $750 Save & Return credit towards the total device cost (phone must be returned within 2 years)"
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": false
+            },
+            {
+                "id": "sku_devicePrice_tieredtradein_RFIN3_ULTI_p438194860_IP18P256BUR_NAC_RF_ULT_NAC",
+                "name": "RFIN3_ULTI.RF_ULT_NAC.TIEREDTRADEIN.ULTI_C_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "TIEREDTRADEIN",
+                "tierCode": "RFIN3_ULTI",
+                "hupTier": "ULTI_C_NAC",
+                "programCode": "RF_ULT_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 1559.28,
+                "financingAmount": 1799.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 10.0,
+                "totalTradeInCreditAmount": 240.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 240.0,
+                "rvAmount": 0.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 64.97,
+                "monthlyStrikePrice": 74.97,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": false,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 10.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": false
+            },
+            {
+                "id": "sku_devicePrice_financing_RFIN3HIGH_p561959128_IP18P256BUR_NAC_RF3HGH_NAC",
+                "name": "RFIN3HIGH.RF3HGH_NAC.FINANCING.RF3HGH_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "FINANCING",
+                "tierCode": "RFIN3HIGH",
+                "hupTier": "RF3HGH_NAC",
+                "programCode": "RF3HGH_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 1799.28,
+                "financingAmount": 1799.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 0.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 74.97,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": false,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": false
+            },
+            {
+                "id": "sku_devicePrice_financing_RFIN3LOW_p172285776_IP18P256BUR_NAC_RF3LOW_NAC",
+                "name": "RFIN3LOW.RF3LOW_NAC.FINANCING.RF3LOW_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "FINANCING",
+                "tierCode": "RFIN3LOW",
+                "hupTier": "RF3LOW_NAC",
+                "programCode": "RF3LOW_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 1799.28,
+                "financingAmount": 1799.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 0.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 74.97,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": false,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": false
+            },
+            {
+                "id": "sku_devicePrice_financing_EDGEFIN2TAB_p840802789_IP18P256BUR_NAC_EDGEF2_NAC",
+                "name": "EDGEFIN2TAB.EDGEF2_NAC.FINANCING.EDGEF2_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "FINANCING",
+                "tierCode": "EDGEFIN2TAB",
+                "hupTier": "EDGEF2_NAC",
+                "programCode": "EDGEF2_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 1799.28,
+                "financingAmount": 1799.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 0.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 74.97,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": false,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": false
+            },
+            {
+                "id": "sku_devicePrice_financing_RFIN3_ULTI_p222936675_IP18P256BUR_NAC_RF_ULT_NAC",
+                "name": "RFIN3_ULTI.RF_ULT_NAC.FINANCING.ULTI_C_NAC",
+                "priceType": "recurringCharge",
+                "priceTier": "FINANCING",
+                "tierCode": "RFIN3_ULTI",
+                "hupTier": "ULTI_C_NAC",
+                "programCode": "RF_ULT_NAC",
+                "financing": true,
+                "publiclyAvailable": true,
+                "recurringChargePeriod": 24,
+                "recurringCreditDuration": 0,
+                "programIndicator": "Consumer",
+                "dpPriceTierIds": [
+                    "DPTIER5",
+                    "DPTIER4"
+                ],
+                "srpWithTax": 0.0,
+                "totalCostOfBorrowing": 0.0,
+                "regularAmount": 1799.28,
+                "mandatoryPaymentAmount": 0.0,
+                "maximumDownPaymentAmount": 1799.28,
+                "financingAmount": 1799.28,
+                "srpAmount": 0.0,
+                "recurringCreditAmount": 0.0,
+                "totalRecurringCreditAmount": 0.0,
+                "tradeInCreditAmount": 0.0,
+                "totalTradeInCreditAmount": 0.0,
+                "srCreditAmount": 0.0,
+                "totalSrCreditAmount": 0.0,
+                "totalDeviceCreditAmount": 0.0,
+                "rvAmount": 0.0,
+                "subsidyAmount": 0.0,
+                "totalFinanceAmount": 0.0,
+                "monthlyInstallmentAmount": 74.97,
+                "monthlyStrikePrice": 0.0,
+                "previousRvAmount": 0.0,
+                "adminFee": 0.0,
+                "preHupCharge": 0.0,
+                "subsidyCharge": 0.0,
+                "adminFeeCreditAmount": 0.0,
+                "cheapestPrice": false,
+                "nonTradeInCheapestPrice": false,
+                "upfrontEdge": false,
+                "promotion": {
+                    "promoCopy": "New!",
+                    "stepperPromoCopy": "",
+                    "purchaseIncludesPromoCopy": "",
+                    "limitedTimeOffer": false
+                },
+                "promo": {
+                    "heading": {
+                        "copy": "Things to know"
+                    },
+                    "backgroundColor": "misty",
+                    "promotions": [
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "This device is compatible with eSIM only. Physical SIMs are not supported."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Get a bill credit of up to $600 with eligible trade-in.."
+                        },
+                        {
+                            "popover": {
+                                "content": "",
+                                "placement": "auto",
+                                "trigger": {
+                                    "caption": "See more Details",
+                                    "ariaLabel": "See more Details"
+                                },
+                                "close": {
+                                    "caption": "Close",
+                                    "ariaLabel": "Close"
+                                },
+                                "bottomContent": ""
+                            },
+                            "content": "Eligible for a $240 trade-in bonus when you finance and trade in on an Ultimate plan. Excludes Save & Return."
+                        }
+                    ],
+                    "purchaseIncludesBottomCopy": "Return Policy - Worry-free returns within 15 days at no cost for online orders"
+                },
+                "hideVoluntaryDP": false,
+                "compatibleWithCurrentPlan": false,
+                "maxDevBalWaived": 0.0,
+                "eligiblePromoIds": [],
+                "tradeInValueAppliedAmount": 0.0,
+                "tradeInCarryoverAmount": 0.0,
+                "tradeInValue": 0.0,
+                "inMarketRecurringCreditAmount": 0.0,
+                "inMarketTradeInCreditAmount": 0.0,
+                "inMarketSRCreditAmount": 0.0,
+                "inMarketMandatoryPayment": 0.0,
+                "hideDevicePrice": true
+            }
+        ]
+    }
+]

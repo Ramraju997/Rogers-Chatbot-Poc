@@ -31,29 +31,34 @@ Example, iPhone 18 Pro, 100 GB+ data, Save & Return:
 
 ## Setup
 
-### 1. Catalog data (not in git)
+> **This repo must stay private.** It contains a Google service-account key (`backend/service-account.json`) and catalog data.
 
-The catalog files are raw catalog API responses, so they are kept out of this public repo. Put them in `backend/data/`:
+### On a new machine
 
+The catalog data, the key and all config are in the repo, so a fresh clone runs as-is:
+
+```bash
+git clone https://github.com/Ramraju997/Rogers-Chatbot-Poc.git
+cd Rogers-Chatbot-Poc
 ```
-backend/data/devices.json                    device list (facets + devices)
-backend/data/plans.json                      plan list
-backend/data/device-prices/<externalId>.json full price list for one device, e.g. IP18P256BUR.json
-```
 
-A device without a `device-prices` file still works, but only with plans in its headline price tier.
+Then run it (below). Needs Java 17+, Maven and Node 20+.
 
-### 2. Google credentials
+### What's where
 
-Put the service-account key at `backend/service-account.json` (git-ignored), or set `GOOGLE_APPLICATION_CREDENTIALS` to its path. The account needs the **Dialogflow API Client** role.
+| File | Purpose |
+| --- | --- |
+| `backend/data/devices.json` | Device list (facets + devices) |
+| `backend/data/plans.json` | Plan list |
+| `backend/data/device-prices/<externalId>.json` | Full price list for one device, e.g. `IP18P256BUR.json`. Devices without one only get plans in their headline price tier. |
+| `backend/service-account.json` | Google key with the **Dialogflow API Client** role (project `new-project-511709`) |
+| `backend/src/main/resources/application.yml` | Project, location and agent ID (override with `PROJECT_ID`, `LOCATION`, `AGENT_ID`) |
 
-Project, location and agent ID are in `backend/src/main/resources/application.yml` (override with `PROJECT_ID`, `LOCATION`, `AGENT_ID`).
+### Dialogflow agent (already done)
 
-### 3. Dialogflow agent
+The agent is configured as in [`dialogflow/playbook.md`](dialogflow/playbook.md): playbook instructions plus the `recommend_device_plan` function tool. Use a **non-lite** model; `gemini-3.1-flash-lite` ends the conversation after the tool returns.
 
-Follow [`dialogflow/playbook.md`](dialogflow/playbook.md): paste the new playbook instructions and create the `recommend_device_plan` function tool.
-
-### 4. Run
+### Run
 
 ```bash
 # Terminal 1: backend (Java 17+, Maven)
@@ -88,7 +93,8 @@ curl -X POST http://localhost:3000/api/recommend -H "Content-Type: application/j
 
 - **`PKIX path building failed`** when the backend calls Google: your network inspects HTTPS. Import the company root certificate into the JDK truststore, or ask IT for the approved approach.
 - **`PERMISSION_DENIED`**: wrong key file or missing Dialogflow API Client role.
-- **The bot answers but no cards appear**: the playbook isn't using the tool yet; check step 3.
+- **The bot answers but no cards appear**: the playbook isn't using the tool yet; see `dialogflow/playbook.md`.
+- **"(No response from agent)" right after a tool call**: the agent ended the session after reading the tool result. Switch the playbook to a non-lite model. To see exactly what Dialogflow returns, set `com.rogers.chatbot.chat: DEBUG` in `application.yml` and check `backend/logs/backend.log`.
 - **Catalog files not found**: the backend must run from the `backend` folder, or set `CATALOG_DATA_DIR`.
 
 ## Not done yet
