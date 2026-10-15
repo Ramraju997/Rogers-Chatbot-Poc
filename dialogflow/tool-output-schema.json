@@ -11,12 +11,31 @@
     },
     "deviceOptions": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Devices to choose from when status is NEED_DEVICE_CHOICE."
     },
     "device": {
       "type": "object",
-      "description": "The matched device: name, storage, color, condition, simType."
+      "description": "The matched device.",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "storage": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "simType": {
+          "type": "string"
+        }
+      }
     },
     "recommendations": {
       "type": "array",
@@ -24,20 +43,87 @@
       "items": {
         "type": "object",
         "properties": {
-          "rank": { "type": "integer" },
-          "planName": { "type": "string" },
-          "data": { "type": "string" },
-          "calling": { "type": "string" },
-          "planMonthly": { "type": "number" },
-          "totalMonthly": { "type": "number" },
-          "payment": { "type": "object" },
-          "otherPaymentOptions": { "type": "array", "items": { "type": "object" } }
+          "rank": {
+            "type": "integer"
+          },
+          "planName": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "calling": {
+            "type": "string"
+          },
+          "planMonthly": {
+            "type": "number"
+          },
+          "totalMonthly": {
+            "type": "number"
+          },
+          "payment": {
+            "type": "object",
+            "properties": {
+              "option": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "deviceMonthly": {
+                "type": "number"
+              },
+              "totalMonthly": {
+                "type": "number"
+              },
+              "termMonths": {
+                "type": "integer"
+              },
+              "upfront": {
+                "type": "number"
+              },
+              "returnCredit": {
+                "type": "number"
+              }
+            }
+          },
+          "otherPaymentOptions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "option": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "deviceMonthly": {
+                  "type": "number"
+                },
+                "totalMonthly": {
+                  "type": "number"
+                },
+                "termMonths": {
+                  "type": "integer"
+                },
+                "upfront": {
+                  "type": "number"
+                },
+                "returnCredit": {
+                  "type": "number"
+                }
+              }
+            }
+          }
         }
       }
     },
     "notes": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Important device facts and promotions to mention."
     }
   }
