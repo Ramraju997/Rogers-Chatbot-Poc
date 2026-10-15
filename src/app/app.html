@@ -12,6 +12,89 @@
       <div class="msg" [class.msg--user]="m.from === 'user'" [class.msg--error]="m.error">
         {{ m.text }}
       </div>
+
+      @if (m.result; as r) {
+        <div class="recs">
+          @if (r.device; as d) {
+            <div class="recs__device">
+              @if (d.imageUrl) {
+                <img [src]="d.imageUrl" [alt]="d.name" />
+              }
+              <div>
+                <strong>{{ d.name }}</strong>
+                <span>{{ d.storage }}{{ d.color ? ' · ' + d.color : '' }}{{ d.condition ? ' · ' + d.condition : '' }}</span>
+              </div>
+            </div>
+          }
+
+          @for (rec of r.recommendations; track rec.planId) {
+            <article class="card" [class.card--best]="rec.rank === 1">
+              @if (rec.rank === 1) {
+                <span class="card__badge">Lowest monthly</span>
+              }
+              <header class="card__head">
+                <h2>{{ rec.planName }}</h2>
+                <div class="card__total">
+                  {{ rec.totalMonthly | currency: 'CAD' : 'symbol-narrow' }}<small>/mo</small>
+                </div>
+              </header>
+
+              <ul class="card__facts">
+                <li><span>Data</span>{{ rec.data }}</li>
+                @if (rec.calling) {
+                  <li><span>Calling</span>{{ rec.calling }}</li>
+                }
+                <li><span>Plan</span>{{ rec.planMonthly | currency: 'CAD' : 'symbol-narrow' }}/mo</li>
+                <li>
+                  <span>Phone</span>{{ rec.payment.deviceMonthly | currency: 'CAD' : 'symbol-narrow' }}/mo ·
+                  {{ paymentName(rec.payment.option) }}
+                  @if (rec.payment.termMonths) {
+                    ({{ rec.payment.termMonths }} mo)
+                  }
+                </li>
+              </ul>
+
+              @if (rec.payment.returnCredit) {
+                <p class="card__note">
+                  Return the phone after {{ rec.payment.termMonths }} months
+                  ({{ rec.payment.returnCredit | currency: 'CAD' : 'symbol-narrow' : '1.0-0' }} Save &amp; Return credit).
+                </p>
+              }
+
+              @if (rec.otherPaymentOptions?.length) {
+                <details class="card__more">
+                  <summary>Other ways to pay</summary>
+                  <ul>
+                    @for (o of rec.otherPaymentOptions; track o.option) {
+                      <li>
+                        {{ paymentName(o.option) }}:
+                        @if (o.option === 'outright') {
+                          {{ o.upfront | currency: 'CAD' : 'symbol-narrow' }} upfront +
+                          {{ o.totalMonthly | currency: 'CAD' : 'symbol-narrow' }}/mo
+                        } @else {
+                          {{ o.totalMonthly | currency: 'CAD' : 'symbol-narrow' }}/mo
+                        }
+                      </li>
+                    }
+                  </ul>
+                </details>
+              }
+
+              @if (rec.cartUrl) {
+                <a class="card__cta" [href]="rec.cartUrl" target="_blank" rel="noopener">Choose this option</a>
+              }
+            </article>
+          }
+
+          @if (r.notes?.length) {
+            <ul class="recs__notes">
+              @for (n of r.notes; track n) {
+                <li>{{ n }}</li>
+              }
+            </ul>
+          }
+        </div>
+      }
     }
     @if (sending()) {
       <div class="msg typing" aria-label="Assistant is typing">

@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "deviceQuery": {
+      "type": "string",
+      "description": "The phone the customer wants, as specifically as they said it, e.g. 'iPhone 18 Pro' or 'Pixel 11'."
+    },
+    "condition": {
+      "type": "string",
+      "enum": ["new", "preowned"],
+      "description": "Only set if the customer asked for a new or a pre-owned (used, refurbished) phone."
+    },
+    "dataNeed": {
+      "type": "string",
+      "enum": ["light", "moderate", "heavy", "unlimited"],
+      "description": "light = mostly on Wi-Fi, moderate = about 60 GB a month, heavy = 100 GB or more, unlimited = wants unlimited data."
+    },
+    "international": {
+      "type": "boolean",
+      "description": "true if the customer calls people or travels outside Canada."
+    },
+    "paymentOption": {
+      "type": "string",
+      "enum": ["any", "save_return", "finance", "trade_in", "outright"],
+      "description": "save_return = lowest monthly, return the phone after 24 months; finance = keep the phone; trade_in = trading in an old phone; outright = pay the full price now; any = not decided."
+    },
+    "maxMonthlyBudget": {
+      "type": "number",
+      "description": "The most the customer wants to pay per month for plan and phone together, in CAD."
+    }
+  },
+  "required": ["deviceQuery"]
+}

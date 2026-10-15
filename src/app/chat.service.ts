@@ -2,13 +2,54 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface PaymentQuote {
+  option: 'save_return' | 'finance' | 'trade_in' | 'outright';
+  label: string;
+  deviceMonthly: number;
+  totalMonthly: number;
+  termMonths?: number;
+  upfront?: number;
+  returnCredit?: number;
+  devicePriceId?: string;
+}
+
+export interface Recommendation {
+  rank: number;
+  planName: string;
+  planId: string;
+  data: string;
+  calling?: string;
+  planMonthly: number;
+  payment: PaymentQuote;
+  totalMonthly: number;
+  otherPaymentOptions?: PaymentQuote[];
+  cartUrl?: string;
+}
+
+export interface RecommendResult {
+  status: string;
+  device?: {
+    name: string;
+    storage?: string;
+    color?: string;
+    condition?: string;
+    simType?: string;
+    imageUrl?: string;
+    fullPricingAvailable: boolean;
+  };
+  recommendations?: Recommendation[];
+  notes?: string[];
+}
+
 export interface ChatReply {
   messages: string[];
+  /** Present when the agent used the recommendation tool for this reply. */
+  recommendations?: RecommendResult;
 }
 
 /**
- * Talks to our own backend (/api/chat), which in turn calls Dialogflow CX.
- * The browser never sees Google credentials.
+ * Talks to the Spring Boot backend (/api/chat), which calls Dialogflow CX and runs the
+ * recommendation tool. The browser never sees Google credentials.
  */
 @Injectable({ providedIn: 'root' })
 export class ChatService {

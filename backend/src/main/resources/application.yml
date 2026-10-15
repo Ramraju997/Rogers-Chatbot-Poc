@@ -1,0 +1,19 @@
+server:
+  # Same port the Angular dev proxy (proxy.conf.json) forwards /api to.
+  port: 3000
+
+dialogflow:
+  project-id: ${PROJECT_ID:new-project-511709}
+  location: ${LOCATION:global}
+  agent-id: ${AGENT_ID:bc65dfa2-8fc6-4461-b5fb-4fe3dac90f57}
+  language-code: en
+  # Path to the service-account JSON key. Leave empty to use
+  # Application Default Credentials (gcloud auth application-default login).
+  credentials-file: ${GOOGLE_APPLICATION_CREDENTIALS:service-account.json}
+
+catalog:
+  # Folder holding devices.json, plans.json and device-prices/<externalId>.json.
+  # Kept out of git; see backend/README.md.
+  data-dir: ${CATALOG_DATA_DIR:data}
+  # Placeholder hand-off link; replace with the real rogers.com cart deep-link format.
+  cart-url-template: "https://www.rogers.com/phones/{slug}?sku={deviceSkuId}&price={devicePriceId}&plan={planId}"

@@ -10,3 +10,8 @@ npm-debug.log*
 Thumbs.db
 .vscode/*
 !.vscode/extensions.json
+
+# Spring Boot backend
+backend/target/
+backend/data/
+backend/service-account.json
