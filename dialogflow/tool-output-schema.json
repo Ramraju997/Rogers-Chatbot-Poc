@@ -44,7 +44,7 @@
         "type": "object",
         "properties": {
           "rank": {
-            "type": "integer"
+            "type": "number"
           },
           "planName": {
             "type": "string"
@@ -77,7 +77,7 @@
                 "type": "number"
               },
               "termMonths": {
-                "type": "integer"
+                "type": "number"
               },
               "upfront": {
                 "type": "number"
@@ -105,7 +105,7 @@
                   "type": "number"
                 },
                 "termMonths": {
-                  "type": "integer"
+                  "type": "number"
                 },
                 "upfront": {
                   "type": "number"
