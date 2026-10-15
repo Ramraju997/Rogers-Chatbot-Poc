@@ -1,0 +1,39 @@
+<main class="chat">
+  <header class="chat__header">
+    <span class="dot" aria-hidden="true"></span>
+    <div>
+      <h1>Rogers Assistant</h1>
+      <p>Proof of concept · Dialogflow CX</p>
+    </div>
+  </header>
+
+  <section class="chat__messages" #scroller aria-live="polite">
+    @for (m of messages(); track $index) {
+      <div class="msg" [class.msg--user]="m.from === 'user'" [class.msg--error]="m.error">
+        {{ m.text }}
+      </div>
+    }
+    @if (sending()) {
+      <div class="msg typing" aria-label="Assistant is typing">
+        <span></span><span></span><span></span>
+      </div>
+    }
+  </section>
+
+  <div class="chat__suggestions">
+    @for (s of suggestions; track s) {
+      <button type="button" (click)="send(s)" [disabled]="sending()">{{ s }}</button>
+    }
+  </div>
+
+  <form class="chat__input" (ngSubmit)="send()">
+    <input
+      name="draft"
+      [(ngModel)]="draft"
+      placeholder="Type a message…"
+      autocomplete="off"
+      [disabled]="sending()"
+    />
+    <button type="submit" [disabled]="sending() || !draft.trim()">Send</button>
+  </form>
+</main>

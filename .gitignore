@@ -1,0 +1,12 @@
+node_modules/
+dist/
+out-tsc/
+.angular/
+.env
+*.key.json
+service-account*.json
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
