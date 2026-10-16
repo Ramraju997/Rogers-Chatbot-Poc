@@ -1,3 +1,21 @@
+// Chat-app style scrollbar (like WhatsApp Web): invisible at rest, a thin rounded bar on hover.
+// Scrolling with wheel, trackpad or touch always works.
+@mixin quiet-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  &:hover,
+  &:focus-within {
+    scrollbar-color: var(--scroll-thumb) transparent;
+  }
+
+  // Safari
+  &::-webkit-scrollbar { width: 6px; height: 6px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: transparent; border-radius: 999px; }
+  &:hover::-webkit-scrollbar-thumb { background: var(--scroll-thumb); }
+}
+
 :host {
   display: flex;
   justify-content: center;
@@ -41,6 +59,8 @@
   flex-direction: column;
   gap: 8px;
   padding: 20px;
+
+  @include quiet-scrollbar;
 
   // Scroll the conversation instead of squashing items when it gets long.
   > * { flex-shrink: 0; }
@@ -90,6 +110,7 @@
   padding: 10px 2px 6px;
   align-self: stretch;
   scroll-snap-type: x mandatory;
+  @include quiet-scrollbar;
 }
 
 .phone {
