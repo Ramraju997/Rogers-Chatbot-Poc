@@ -1,6 +1,7 @@
 package com.rogers.chatbot.chat;
 
 import com.google.api.gax.rpc.ApiException;
+import com.rogers.chatbot.config.DialogflowConfig;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -53,6 +54,7 @@ public class ChatController {
   public ResponseEntity<Map<String, String>> dialogflowError(ApiException e) {
     log.error("Dialogflow error", e);
     return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
-        .body(Map.of("error", "Dialogflow error: " + e.getStatusCode().getCode() + " " + e.getMessage()));
+        .body(Map.of("error", "Dialogflow error: " + e.getStatusCode().getCode()
+            + ". Cause: " + DialogflowConfig.rootCause(e)));
   }
 }
