@@ -1,14 +1,17 @@
 import { Component, ElementRef, inject, signal, viewChild, afterRenderEffect } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ChatService, PaymentQuote, RecommendResult } from './chat.service';
+import { ChatService, DeviceChoice, PaymentQuote, RecommendResult } from './chat.service';
+import { formatBotText } from './format-text';
 
 interface Message {
   from: 'user' | 'bot';
   text: string;
   error?: boolean;
-  /** Device + plan options shown as cards under this message. */
+  /** Device + plan options, or phones to pick from, shown as cards under this message. */
   result?: RecommendResult;
+  /** Name of the phone card the customer tapped, so the others can be dimmed. */
+  picked?: string;
 }
 
 const PAYMENT_NAMES: Record<PaymentQuote['option'], string> = {
@@ -55,6 +58,17 @@ export class App {
     return PAYMENT_NAMES[option] ?? option;
   }
 
+  html(text: string): string {
+    return formatBotText(text);
+  }
+
+  /** Tapping a phone card answers the agent's "which one?" question with that phone. */
+  pickDevice(message: Message, choice: DeviceChoice): void {
+    if (this.sending() || message.picked) return;
+    this.messages.update((all) => all.map((m) => (m === message ? { ...m, picked: choice.name } : m)));
+    this.send(choice.name);
+  }
+
   send(text: string = this.draft): void {
     const message = text.trim();
     if (!message || this.sending()) return;
@@ -68,7 +82,8 @@ export class App {
         const texts = reply.messages.length ? reply.messages : ['(No response from agent)'];
         const botMessages: Message[] = texts.map((t) => ({ from: 'bot', text: t }));
         // Show the option cards under the last part of the reply.
-        if (reply.recommendations?.recommendations?.length) {
+        const r = reply.recommendations;
+        if (r?.recommendations?.length || r?.deviceChoices?.length) {
           botMessages[botMessages.length - 1].result = reply.recommendations;
         }
         this.messages.update((m) => [...m, ...botMessages]);

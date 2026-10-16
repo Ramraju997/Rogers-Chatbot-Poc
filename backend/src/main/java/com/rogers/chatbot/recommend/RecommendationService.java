@@ -90,9 +90,11 @@ public class RecommendationService {
 
     List<String> names = candidates.stream().map(RecommendationService::name).distinct().sorted().toList();
     if (names.size() > 1) {
+      List<String> shown = names.subList(0, Math.min(names.size(), 8));
       return new RecommendResponse("NEED_DEVICE_CHOICE",
-          "Several devices match. Ask the customer which one they mean.",
-          names.subList(0, Math.min(names.size(), 8)), null, null, null);
+          "Several devices match. In one short sentence, ask which one they mean; "
+              + "they can also tap one of the phones shown on screen.",
+          shown, null, null, null, deviceChoices(candidates, shown));
     }
 
     JsonNode device = candidates.stream()
@@ -183,6 +185,30 @@ public class RecommendationService {
   // ---- helpers ----------------------------------------------------------------------------
 
   private record Candidate(JsonNode plan, double gb, double planPrice, PaymentQuote main, List<PaymentQuote> others) {}
+
+  /** One card per device name (new before pre-owned), with its headline "from" price. */
+  private static List<RecommendResponse.DeviceChoice> deviceChoices(List<JsonNode> candidates, List<String> names) {
+    List<RecommendResponse.DeviceChoice> choices = new ArrayList<>();
+    for (String n : names) {
+      JsonNode d = candidates.stream()
+          .filter(c -> name(c).equals(n))
+          .min(Comparator.comparing(c -> !"new".equalsIgnoreCase(c.path("deviceConditionKey").asText())))
+          .orElseThrow();
+      JsonNode pricing = d.path("pricing");
+      double monthly = pricing.path("monthlyInstallmentAmount").asDouble(0);
+      double full = pricing.path("regularAmount").asDouble(0);
+      choices.add(new RecommendResponse.DeviceChoice(
+          n,
+          d.path("memory").asText(null),
+          d.path("deviceCondition").asText(null),
+          d.path("picture").path("src").asText(null),
+          d.path("label").asText(null),
+          monthly > 0 ? money(monthly) : null,
+          monthly > 0 ? paymentOption(pricing) : null,
+          full > 0 ? money(full) : null));
+    }
+    return choices;
+  }
 
   private static PaymentQuote quote(String option, JsonNode row, double planPrice) {
     String label = PAYMENT_LABELS.get(option);

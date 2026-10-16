@@ -81,8 +81,10 @@ public class ChatService {
       }
 
       ToolOutcome outcome = runTool(toolCall);
-      if (outcome.recommendation() != null && "OK".equals(outcome.recommendation().status())) {
-        shown = outcome.recommendation();
+      RecommendResponse result = outcome.recommendation();
+      // Plan cards (OK) or phone cards to pick from (NEED_DEVICE_CHOICE) go to the UI.
+      if (result != null && ("OK".equals(result.status()) || result.deviceChoices() != null)) {
+        shown = result;
       }
       input = QueryInput.newBuilder()
           .setToolCallResult(ToolCallResult.newBuilder()
@@ -118,7 +120,7 @@ public class ChatService {
 
       RecommendRequest request = mapper.readValue(inputJson, RecommendRequest.class);
       RecommendResponse result = recommendations.recommend(request);
-      return new ToolOutcome(toStruct(result), result);
+      return new ToolOutcome(toStruct(result.forAgent()), result);
     } catch (Exception e) {
       log.error("Tool call failed", e);
       Struct error = Struct.newBuilder()

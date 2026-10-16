@@ -9,11 +9,52 @@
 
   <section class="chat__messages" #scroller aria-live="polite">
     @for (m of messages(); track $index) {
-      <div class="msg" [class.msg--user]="m.from === 'user'" [class.msg--error]="m.error">
-        {{ m.text }}
-      </div>
+      @if (m.from === 'bot' && !m.error) {
+        <div class="msg msg--rich" [innerHTML]="html(m.text)"></div>
+      } @else {
+        <div class="msg" [class.msg--user]="m.from === 'user'" [class.msg--error]="m.error">{{ m.text }}</div>
+      }
 
-      @if (m.result; as r) {
+      @if (m.result?.deviceChoices; as choices) {
+        <div class="phones" role="list" aria-label="Choose a phone">
+          @for (d of choices; track d.name) {
+            <button
+              type="button"
+              role="listitem"
+              class="phone"
+              [class.phone--picked]="m.picked === d.name"
+              [class.phone--dimmed]="m.picked && m.picked !== d.name"
+              [disabled]="sending() || !!m.picked"
+              (click)="pickDevice(m, d)"
+            >
+              @if (d.label) {
+                <span class="phone__label">{{ d.label }}</span>
+              }
+              <span class="phone__img">
+                @if (d.imageUrl) {
+                  <img [src]="d.imageUrl" [alt]="d.name" loading="lazy" />
+                }
+              </span>
+              <span class="phone__name">{{ d.name }}</span>
+              <span class="phone__meta">{{ d.storage }}{{ d.condition && d.condition !== 'New' ? ' · ' + d.condition : '' }}</span>
+              @if (d.fromMonthly) {
+                <span class="phone__price">
+                  from <strong>{{ d.fromMonthly | currency: 'CAD' : 'symbol-narrow' }}</strong>/mo
+                </span>
+                @if (d.fromPaymentOption) {
+                  <span class="phone__meta">{{ paymentName(d.fromPaymentOption) }}</span>
+                }
+              }
+              @if (d.fullPrice) {
+                <span class="phone__meta">or {{ d.fullPrice | currency: 'CAD' : 'symbol-narrow' }} full price</span>
+              }
+              <span class="phone__cta">{{ m.picked === d.name ? 'Selected' : 'Choose' }}</span>
+            </button>
+          }
+        </div>
+      }
+
+      @if (m.result?.recommendations?.length && m.result; as r) {
         <div class="recs">
           @if (r.device; as d) {
             <div class="recs__device">

@@ -21,11 +21,34 @@ public record RecommendResponse(
     List<String> deviceOptions,
     Device device,
     List<Recommendation> recommendations,
-    List<String> notes) {
+    List<String> notes,
+    List<DeviceChoice> deviceChoices) {
+
+  public RecommendResponse(String status, String message, List<String> deviceOptions, Device device,
+      List<Recommendation> recommendations, List<String> notes) {
+    this(status, message, deviceOptions, device, recommendations, notes, null);
+  }
 
   public static RecommendResponse of(String status, String message) {
     return new RecommendResponse(status, message, null, null, null, null);
   }
+
+  /** The part the Dialogflow agent needs; UI-only fields like device cards are left out. */
+  public RecommendResponse forAgent() {
+    return new RecommendResponse(status, message, deviceOptions, device, recommendations, notes, null);
+  }
+
+  /** A device the customer can pick from when their request matched several. Shown as a card. */
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  public record DeviceChoice(
+      String name,
+      String storage,
+      String condition,
+      String imageUrl,
+      String label,
+      Double fromMonthly,
+      String fromPaymentOption,
+      Double fullPrice) {}
 
   @JsonInclude(JsonInclude.Include.NON_NULL)
   public record Device(

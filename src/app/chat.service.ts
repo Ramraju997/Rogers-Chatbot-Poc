@@ -26,8 +26,21 @@ export interface Recommendation {
   cartUrl?: string;
 }
 
+export interface DeviceChoice {
+  name: string;
+  storage?: string;
+  condition?: string;
+  imageUrl?: string;
+  label?: string;
+  fromMonthly?: number;
+  fromPaymentOption?: PaymentQuote['option'];
+  fullPrice?: number;
+}
+
 export interface RecommendResult {
   status: string;
+  /** Phones to pick from when the request matched several (status NEED_DEVICE_CHOICE). */
+  deviceChoices?: DeviceChoice[];
   device?: {
     name: string;
     storage?: string;
