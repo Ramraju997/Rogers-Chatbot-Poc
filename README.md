@@ -91,7 +91,7 @@ curl -X POST http://localhost:3000/api/recommend -H "Content-Type: application/j
 
 ## Troubleshooting
 
-- **`PKIX path building failed`** when the backend calls Google: your network inspects HTTPS. Import the company root certificate into the JDK truststore, or ask IT for the approved approach.
+- **`UNAUTHENTICATED: Failed computing credential metadata`** or **`PKIX path building failed`**: the network inspects HTTPS with a company certificate Java doesn't know. On Windows the backend already uses the Windows certificate store (same as the browser) to handle this; if it still fails, check the `Caused by:` line in the backend console. A `Connection timed out` there means the office needs a proxy: start with `-Dhttps.proxyHost=<host> -Dhttps.proxyPort=<port>`.
 - **`PERMISSION_DENIED`**: wrong key file or missing Dialogflow API Client role.
 - **The bot answers but no cards appear**: the playbook isn't using the tool yet; see `dialogflow/playbook.md`.
 - **"(No response from agent)" right after a tool call**: the agent ended the session after reading the tool result. Switch the playbook to a non-lite model. To see exactly what Dialogflow returns, set `com.rogers.chatbot.chat: DEBUG` in `application.yml` and check `backend/logs/backend.log`.
