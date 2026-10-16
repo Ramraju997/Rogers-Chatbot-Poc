@@ -23,16 +23,19 @@ public class DialogflowConfig {
   public SessionsClient sessionsClient(DialogflowProperties props) throws IOException {
     SessionsSettings.Builder settings = SessionsSettings.newBuilder().setEndpoint(props.endpoint());
 
-    String keyFile = props.credentialsFile();
-    if (StringUtils.hasText(keyFile) && Files.exists(Path.of(keyFile))) {
-      try (InputStream in = Files.newInputStream(Path.of(keyFile))) {
+    String configured = props.credentialsFile();
+    Path keyFile = StringUtils.hasText(configured) ? PathResolver.resolve(configured) : null;
+    if (keyFile != null && Files.exists(keyFile)) {
+      try (InputStream in = Files.newInputStream(keyFile)) {
         GoogleCredentials creds = GoogleCredentials.fromStream(in)
             .createScoped("https://www.googleapis.com/auth/cloud-platform");
         settings.setCredentialsProvider(FixedCredentialsProvider.create(creds));
       }
-      log.info("Using service-account key {}", Path.of(keyFile).toAbsolutePath());
+      log.info("Using service-account key {}", keyFile);
     } else {
-      log.info("No key file at '{}', using Application Default Credentials", keyFile);
+      log.warn("No service-account key found at '{}' (working folder: {}). Falling back to "
+          + "Application Default Credentials, which needs 'gcloud auth application-default login'.",
+          keyFile, Path.of("").toAbsolutePath());
     }
     return SessionsClient.create(settings.build());
   }

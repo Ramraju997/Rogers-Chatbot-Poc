@@ -3,6 +3,7 @@ package com.rogers.chatbot.catalog;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rogers.chatbot.config.CatalogProperties;
+import com.rogers.chatbot.config.PathResolver;
 import jakarta.annotation.PostConstruct;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -35,7 +36,7 @@ public class CatalogService {
 
   public CatalogService(ObjectMapper mapper, CatalogProperties props) {
     this.mapper = mapper;
-    this.dataDir = Path.of(props.dataDir());
+    this.dataDir = PathResolver.resolve(props.dataDir());
   }
 
   @PostConstruct
